@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="Auteur.xsd" />
+
+<xs:element name="Livre" type="livre"/>
+  <xs:complexType name="livre">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="nom" type="xs:string" minOccurs="0"/>
+      <xs:element name="auteur" type="auteur" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:schema>
